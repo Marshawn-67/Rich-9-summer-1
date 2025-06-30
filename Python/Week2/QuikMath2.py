@@ -11,6 +11,3 @@ sum = divide(5, 35)
 divide(5, 35)
 
 print(sum)
-
-def substract ()
-    return
