@@ -18,6 +18,6 @@ class calculator:
     product = calculator.Multiply(5, 8)
     Dividend = calculator.Divide(12, 4)
 print(sum)
-print(difference)
-print(product)
-print(Dividend)
+print
+print
+print
