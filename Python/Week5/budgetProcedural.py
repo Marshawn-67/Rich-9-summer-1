@@ -18,24 +18,30 @@ def Spend(name, amount):
         raise ValueError("item not in budget")
     expenses[name] += amount
     budgeted = budgets[name]
-    return budgeted - Spend
+    spent = expenses[name]
+    return budgeted - spent
     
 def PrintBudget():
+    print("Budget      Spent      Reamining")
+    print("---------------------------------")
+    totalBudgeted = 0
+    totalSpent = 0
+    totalReamining = 0
     for name in budgets:
         budgeted = budgets[name]
-        spent = expenses = budgeted - spent
+        spent = expenses[name]
         remainingBudget = budgeted - spent
         print(f'{name:15s}, {budgeted:10.2f}, {spent: 10.2f} ' 
               f' {remainingBudget:10.2f}')
+        totalBudgeted += budgeted
+        totalSpent += spent
+        totalReamining = remainingBudget
+        print(f'{"Total":15s}, {budgeted:10.2f}, {spent: 10.2f} ' 
+              f' {remainingBudget:10.2f}')
 
-print(funds)
-AddBudget("clothes",200)
-Spend("clothes",100)
-print(budgets)
-print(expenses)
-print(funds)
 
-print("Total Funds:, funds")
+
+print("Total Funds: ", funds)
 AddBudget("books", 100)
 AddBudget("rent", 800)
 AddBudget("Car note",200)
@@ -44,3 +50,4 @@ Spend("books",50)
 Spend("rent",800)
 Spend("Car note", 200)
 
+PrintBudget()
