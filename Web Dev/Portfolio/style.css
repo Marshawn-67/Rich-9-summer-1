@@ -6,8 +6,8 @@
 }
 
 body {
-    background-color: rgb(61, 237, 29);
-    color: rgb(151, 2, 2);
+    background-color: #080808;
+    color: #fff;
 }
 
 #header  {
@@ -52,11 +52,15 @@ nav ul li a:hover::after{
     width: 100%;
 }
 .header-text{
+   margin-top: 20%;
+   font-size: 30px;
+}
+.header-text h1{
     font-size: 60px;
     margin-top: 20px;
 }
 .header-text h1 span{
-    color: blue;
+    color: #ff004f;
 }
 #about{
 padding: 80px 0;
